@@ -8,6 +8,7 @@ pipeline {
         stage("Tools initialization") {
             steps {
                 sh "java -version"
+                sh "sudo mvn --version"
             }
         }
         stage("Checkout Code") {
@@ -25,7 +26,7 @@ pipeline {
                 }
            }
            steps {
-               sh "mvn clean compile"
+               sh "sudo mvn clean compile"
             }
         }
         stage("Run Test cases") {
