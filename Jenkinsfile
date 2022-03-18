@@ -56,7 +56,7 @@ pipeline {
                 branch 'master'
             }
             steps {
-                sh "sudo mvn tomcat7:deploy"
+                sh "sudo mvn -e tomcat7:deploy"
             }
         }
     }
