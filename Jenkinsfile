@@ -7,7 +7,6 @@ pipeline {
     stages {
         stage("Tools initialization") {
             steps {
-                sh "java -version"
                 sh "sudo mvn --version"
             }
         }
