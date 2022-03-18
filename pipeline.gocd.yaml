@@ -24,8 +24,8 @@ pipelines:
                 - exec:
                     command: sudo /bin/sh
                     arguments:
-                    - start_tomcat.sh
-                    - /opt/tomcat-8.5.41 
+                    - sudo start_tomcat.sh
+                    - sudo /opt/tomcat-8.5.41 
       - Deploy_Project_Stage:
           clean_workspace: true
           jobs:
