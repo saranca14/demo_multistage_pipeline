@@ -131,11 +131,11 @@
 				<version>2.2</version>
 				<configuration>
 					<url>http://localhost:8080/manager/text</url>
-					<server>localhost</server>
+					<server>tomcat7</server>
 					<path>/${finalName}</path>
 					<username>admin</username>
 					<password>admin</password>
-					<update>true</update>
+					<update>false</update>
 				</configuration>
 			</plugin>
 		</plugins>
