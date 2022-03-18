@@ -13,7 +13,7 @@ pipelines:
             build_task:
               tasks:
                 - exec:
-                    command: mvn
+                    command: sudo mvn
                     arguments:
                     - package
       - Start_Tomcat_Stage:
@@ -22,7 +22,7 @@ pipelines:
             start_tomcat_task:
               tasks:
                 - exec:
-                    command: /bin/sh
+                    command: sudo /bin/sh
                     arguments:
                     - start_tomcat.sh
                     - /opt/tomcat-8.5.41 
@@ -32,6 +32,6 @@ pipelines:
             deploy_project_task:
               tasks:
                 - exec:
-                    command: mvn
+                    command: sudo mvn
                     arguments:
                     - tomcat7:deploy
