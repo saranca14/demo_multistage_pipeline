@@ -33,7 +33,7 @@ pipeline {
                 branch 'develop';
             }
            steps {
-               sh "mvn clean test"
+               sh "sudo mvn clean test"
             }
         }
         stage("Check Code coverage") {
