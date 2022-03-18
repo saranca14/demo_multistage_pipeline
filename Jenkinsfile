@@ -21,7 +21,6 @@ pipeline {
                 not {
                     anyOf {
                         branch 'master';
-                        branch 'develop'
                     }
                 }
            }
