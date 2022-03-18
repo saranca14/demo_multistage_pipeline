@@ -7,8 +7,8 @@ pipeline {
     stages {
         stage("Tools initialization") {
             steps {
-                sh "mvn --version"
-                sh "java -version"
+                sh "sudo mvn --version"
+                sh "sudo java -version"
             }
         }
         stage("Checkout Code") {
@@ -57,7 +57,7 @@ pipeline {
                 branch 'master'
             }
             steps {
-                sh "mvn tomcat7:deploy"
+                sh "sudo mvn tomcat7:deploy"
             }
         }
     }
