@@ -1,14 +1,19 @@
 pipeline {
     agent any
     tools {
-        maven 'MAVEN_PATH'
-        jdk 'jdk8'
+        maven 'M3'
+        jdk 'java'
     }
     stages {
         stage("Tools initialization") {
             steps {
+<<<<<<< HEAD
                 sh "sudo mvn --version"
                 sh "sudo java -version"
+=======
+                sh "java -version"
+                sh "sudo mvn --version"
+>>>>>>> 2cfe060f49c2ef2147cf8ca47f5676675d870ed0
             }
         }
         stage("Checkout Code") {
@@ -21,12 +26,11 @@ pipeline {
                 not {
                     anyOf {
                         branch 'master';
-                        branch 'develop'
                     }
                 }
            }
            steps {
-               sh "mvn clean compile"
+               sh "sudo mvn clean compile"
             }
         }
         stage("Run Test cases") {
@@ -34,7 +38,7 @@ pipeline {
                 branch 'develop';
             }
            steps {
-               sh "mvn clean test"
+               sh "sudo mvn clean test"
             }
         }
         stage("Check Code coverage") {

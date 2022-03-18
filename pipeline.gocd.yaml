@@ -4,7 +4,7 @@ pipelines:
     group: defaultGroup
     materials:
       backend:
-        git: https://github.com/iamvickyav/spring-boot-h2-war-tomcat.git
+        git: https://github.com/saranca14/demo_multistage_pipeline.git
         branch: master
     stages:
       - Build_Demo_Project_Stage:
